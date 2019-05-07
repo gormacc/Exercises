@@ -1,0 +1,38 @@
+<script>
+
+function fixAge(values){
+	
+    if(values.length == 0) return "NA";
+    
+	var retText = "";
+    
+    var i;
+	for (i = 0; i < values.length-1; i++) {
+ 		if(values[i] >= 18 && values[i] <= 60){
+        	retText += values[i].toString();
+        	retText += ", ";
+        }
+	} 
+    
+    if(values[i] >= 18 && values[i] <= 60){
+        retText += values[values.length-1].toString();
+    }
+    
+    if(retText.length == 0){
+    	return "NA";
+    }
+    else{
+    	return retText;
+    }
+}
+
+window.onload = function() {
+  document.write(  fixAge([5,15,25,78,59,45])   );
+  document.write("<br/>");
+  document.write(  fixAge([18,3,30,22,11,60])   );
+  document.write("<br/>");
+  document.write(  fixAge([1,3,3,2,11,6])   );
+};
+
+
+</script>

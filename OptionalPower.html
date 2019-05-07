@@ -1,0 +1,18 @@
+<script>
+
+function optionalPow(a, b){
+	var x = 0;
+    
+    if (confirm('Do you want normal power?')) {
+    	return Math.pow(a,b);
+	} else {
+    	return Math.pow(b,a);
+	}
+}
+
+window.onload = function() {
+  document.write(optionalPow(2,3));
+};
+
+
+</script>
